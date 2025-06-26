@@ -1,0 +1,161 @@
+.signin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+
+.signin-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #888;
+    cursor: pointer;
+}
+
+.signin-card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f8f8f8;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.signin-divider {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin: 12px 0;
+    position: relative;
+}
+
+
+
+.signin-social {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signin-social img {
+    width: 20px;
+    height: 20px;
+}
+.signin-social:hover {
+    transform: scale(1.01) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.signin-card {
+    background: #fff;
+    padding: 30px;
+    width: 360px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.signin-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.signin-checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #222;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.signin-checkbox {
+    accent-color: #000;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.signin-link {
+    color: #222;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.signin-link:hover {
+    color: #f16521;
+}
+
+.signin-trouble {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: -8px;
+}
+
+.signin-legal {
+    margin-top: 18px;
+    font-size: 11px;
+    color: #1f1f1f;
+    text-align: left;
+    line-height: 1.5;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

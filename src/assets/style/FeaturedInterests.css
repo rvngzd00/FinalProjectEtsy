@@ -1,0 +1,40 @@
+h4{
+  font: 600 32px Segoe UI;
+  margin: 37px 0 27px;
+}
+.featured-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 7px;
+  
+}
+
+.featured-card{
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 17px;
+  text-decoration: none;
+}
+.featured-card-text{
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  background-color: #fff;
+  border-radius: 30px;
+  font: 500 14px Segoe UI;
+}
+.card-arrow svg{
+  width: 20px;
+  height:20px;
+  visibility: hidden;
+}
+.featured-card:hover .card-arrow svg{
+  visibility: visible;
+}

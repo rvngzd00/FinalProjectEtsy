@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Baskerv";
+  src: url("../fonts/Baskerv1.ttf") format("truetype");
+}
+
+/* App Layout Styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* Placeholder Page Styles */
+.placeholder-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 0;
+}
+
+.placeholder-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.placeholder-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.placeholder-text {
+  color: #6b7280;
+  font-size: 1.125rem;
+}

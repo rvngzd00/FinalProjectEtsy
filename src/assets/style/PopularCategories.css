@@ -1,0 +1,40 @@
+.popular-section-heading {
+    margin: 57px 0 27px 0;
+    font: 600 27px Arial;
+}
+
+.popular-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popular-card {
+    width: 200px;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-decoration: none;
+}
+
+
+.popular-card img {
+    width: 200px;
+    height: 245px;
+    border-radius: 13px;
+    margin: 0 0 7px 0;
+    transition: .2s ease-in-out;
+    object-fit: cover;
+}
+.popular-card img:hover {
+
+    box-shadow:
+        6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        -6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        0 8px 20px -5px rgba(0, 0, 0, 0.25);
+}
+.popular-category {
+    font: 500 17px Segoe UI;
+    color: #000;
+}

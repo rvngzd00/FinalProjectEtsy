@@ -1,0 +1,42 @@
+.promotion-section-heading {
+    margin: 57px 0 27px 0;
+    font: 600 27px Arial;
+}
+
+.promotion-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.promotion-card {
+    width: 250px;
+    border-radius: 17px;
+    padding: 10px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+.promotion-card:hover {
+
+    box-shadow:
+        6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        -6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        0 8px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+.promotion-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 13px;
+    margin: 0 0 7px 0;
+    object-fit: cover;
+}
+
+.promotion-category {
+    font: 500 17px Arial;
+    color: #000;
+}

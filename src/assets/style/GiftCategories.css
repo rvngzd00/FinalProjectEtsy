@@ -1,0 +1,42 @@
+.gift-section-heading {
+    margin: 20px 0 7px 0;
+    font: 600 17px Arial;
+}
+
+.gift-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gift-card {
+    width: 250px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    border: 1px solid #53535354;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+.gift-card:hover {
+    box-shadow:
+        6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        -6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        0 8px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+.gift-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 13px;
+    margin: 0 7px 0 0;
+}
+
+.gift-category {
+    font: 500 13px Segoe UI;
+    color: #000;
+}

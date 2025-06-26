@@ -1,0 +1,49 @@
+.special-gifts-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.special-cards {
+    margin: 57px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.special-card {
+    width: 315px;
+    height: 250px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 17px;
+    text-decoration: none;
+}
+
+.special-card-text {
+    color: #fff;
+    font: 500 17px Segoe UI;
+    text-align: left;
+
+}
+
+.special-gifts-text h5 {
+    font: 500 27px Segoe UI;
+    margin: 0 0 27px 0;
+}
+
+.special-gifts-text a {
+    padding: 12px 15px;
+    color: #000;
+    font: 500 17px Segoe UI;
+    border-radius: 30px;
+    background-color: #e9e9e9;
+    text-decoration: none;
+    transition: ease-in-out .2s;
+}
+
+.special-gifts-text a:hover {
+    background-color: #d4d4d4;
+    box-shadow: var(--clg-effect-sem-shadow-elevation-3, 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026);
+}

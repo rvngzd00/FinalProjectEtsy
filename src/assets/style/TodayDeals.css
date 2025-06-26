@@ -1,0 +1,175 @@
+.today-deals-section {
+    margin: 37px 0 0;
+}
+
+
+h5 {
+    font: 500 27px Segoe UI;
+}
+
+.today-deals-info {
+    display: flex;
+    align-items: center;
+}
+
+.today-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 27px 0 0 0;
+}
+
+.clock-icon svg {
+    margin: 0 7px 0 17px;
+    width: 24px;
+    height: 24px;
+}
+
+.spinnable-clock-svg {
+    transform-origin: center;
+}
+
+.big-hand {
+    transform-origin: 12px 12px;
+    animation: rotateBigHand 17s linear infinite;
+}
+
+.small-hand {
+    transform-origin: 12px 12px;
+    animation: rotateSmallHand 360s linear infinite;
+}
+
+@keyframes rotateBigHand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSmallHand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.timer-text {
+    font: 400 16px Arial;
+    color: #595959;
+}
+
+.today-card {
+    position: relative;
+    width: 267px;
+    height: 377px;
+    border-radius: 17px;
+    border: 1px solid #6868683f;
+    text-decoration: none;
+    transition: .2s ease-in;
+}
+
+.today-card img {
+    width: 277px;
+    height: 267px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card-bottom {
+    padding: 10px 12px;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 400 14px Arial;
+    color: #424242de;
+    width: 157px;
+}
+
+.card-review {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font: 600 14px Arial;
+}
+
+.card-review svg {
+    width: 18px;
+    height: 18px;
+}
+
+.title-section,
+.price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 7px 0;
+}
+
+.card-price {
+    color: #0f733a;
+    font: 600 20px Arial;
+}
+
+.card-old-price {
+    color: #505050d7;
+    font: 400 13px Arial;
+    text-decoration: line-through;
+}
+
+.card-discount {
+    background-color: #a0e193;
+    color: #212121;
+    font: 600 14px Arial;
+    border-radius: 13px;
+    padding: 2px 7px;
+}
+
+.card-text {
+    font: 600 13px Arial;
+    color: #424242de;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 777;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.today-card:hover .favorite-button {
+    opacity: 1;
+}
+
+.today-card:hover {
+    box-shadow: var(--clg-effect-sem-shadow-elevation-3, 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026);
+}
+
+.favorite-button-svg svg {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2px;
+    width: 17px;
+    height: 17px;
+}

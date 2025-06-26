@@ -1,0 +1,162 @@
+.hero-cards {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT CARD  */
+.hero-card-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out .2s;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffe0c3;
+}
+
+.hero-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 50px;
+}
+
+.hero-card-heading {
+    font: 300 50px/1.1 "Georgia";
+    color: #2D2D2D;
+    margin: 0 0 10px 0;
+}
+
+.hero-card-paragraph {
+    font: 500 20px/1.3 Segoe UI;
+    color: #2D2D2D;
+    margin: 0 0 35px 0;
+}
+
+.hero-card-button {
+    background-color: #212121;
+    color: white;
+    padding: 11px 23px;
+    border-radius: 50px;
+    text-decoration: none;
+    font: 600 17px Segoe UI;
+    transition: all .16s ease;
+
+}
+
+.hero-card-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.02);
+}
+
+.hero-card-image {
+    width: 500px;
+}
+
+.hero-card-image img {
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(72% at 72% 50%);
+}
+
+.hero-card-left:hover {
+    box-shadow:
+        6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        -6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        0 8px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* RIGHT CARD  */
+.hero-card-right {
+    height: 397.5px;
+    width: 400px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 25px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero-card-right h4 {
+    font: 500 27px Segoe UI;
+    margin: 0 0 0 0;
+}
+
+.hero-card-right p {
+    font: 500 17px Segoe UI;
+}
+
+.hero-card-right:hover {
+    box-shadow:
+        6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        -6px 0 15px -5px rgba(0, 0, 0, 0.2),
+        0 8px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-card-left {
+        flex-direction: column;
+        min-height: auto;
+        max-width: 100%;
+        margin: 20px;
+        border-radius: 12px;
+    }
+
+    .hero-card-content {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .hero-card-heading {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-card-paragraph {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-card-button {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+
+    .hero-card-image {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-card-left {
+        margin: 10px;
+    }
+
+    .hero-card-content {
+        padding: 30px 20px;
+    }
+
+    .hero-card-heading {
+        font-size: 2rem;
+    }
+
+    .hero-card-paragraph {
+        font-size: 0.95rem;
+    }
+
+    .hero-card-image {
+        height: 250px;
+    }
+}
