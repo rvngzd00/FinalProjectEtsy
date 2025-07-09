@@ -1,0 +1,39 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    height: 387px;
+    text-decoration: none;
+}
+
+.product-card img{
+    width: 327px;
+    height: 257px;
+    border-radius: 7px;
+}
+.product-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 400 14px Arial;
+    color: #212121;
+    margin:7px 0;
+    width: 327px;
+}
+.price-sectionn {
+    display: inline;
+    margin:3px 0 0 0;
+}
+.product-price{
+    font: 777 17px Arial;
+    color: #212121;
+}
+.old-price{
+    color: #505050d7;
+    font: 400 13px Arial;
+    text-decoration: line-through;
+    margin: 0 0 0 7px;
+}
+.product-seller{
+    font: 400 13px Arial;
+    color: #575757bd;
+}

@@ -52,11 +52,11 @@ export default function TodayDeals({ dealCards }) {
                                         </svg>
                                     </span>
                                 </div>
-                                <span className='price-section'>
+                                <div className='price-section'>
                                     <p className='card-price'>{card.price}</p>
                                     <p className='card-old-price'>{card.oldPrice}</p>
                                     <p className='card-discount'>{card.discount}</p>
-                                </span>
+                                </div>
                                 <p className='card-text'>{card.text}</p>
                                 <button className="favorite-button" >
                                     <span className='favorite-button-svg'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.024 12.281a2 2 0 0 1-.147.24l-.673.961q-.349.497-.789.915L12 21.422l-7.415-7.025a6 6 0 0 1-.789-.915l-.673-.961a2 2 0 0 1-.147-.24A6 6 0 0 1 12 4.528a6 6 0 0 1 9.024 7.753"></path></svg></span>

@@ -16,23 +16,23 @@ export default function Navbar() {
         { label: 'Registry', to: '/registry' },
     ];
     const dropdownLinks = [
-        { label: 'Accessories', to: '/accessories' },
-        { label: 'Art & Collectibles', to: '/art-and-collectibles' },
+        { label: 'Accessories', to: '/c/accessories' },
+        { label: 'Art & Collectibles', to: '/c/art-and-collectibles' },
         { label: 'Baby', to: '/c/baby' },
-        { label: 'Bags & Purses', to: '/bags-and-purses' },
-        { label: 'Bath & Beauty', to: '/bath-and-beauty' },
-        { label: 'Books, Movies & Music', to: '/books-movies-and-music' },
+        { label: 'Bags & Purses', to: '/c/bags' },
+        { label: 'Bath & Beauty', to: '/c/bath-and-beauty' },
+        { label: 'Books, Movies & Music', to: '/c/books-movies-and-music' },
         { label: 'Clothing', to: '/c/clothing' },
-        { label: 'Craft Supplies & Tools', to: '/craft-supplies-and-tools' },
-        { label: 'Electronics & Accessories', to: '/electronics-and-accessories' },
-        { label: 'Gifts', to: '/gifts' },
-        { label: 'Home & Living', to: '/home-and-living' },
-        { label: 'Jewelry', to: '/jewelry' },
-        { label: 'Paper & Party Supplies', to: '/paper-and-party-supplies' },
-        { label: 'Pet Supplies', to: '/pet-supplies' },
-        { label: 'Shoes', to: '/shoes' },
-        { label: 'Toys & Games', to: '/toys-and-games' },
-        { label: 'Weddings', to: '/weddings' },
+        { label: 'Craft Supplies & Tools', to: '/c/craft-supplies-and-tools' },
+        { label: 'Electronics & Accessories', to: '/c/electronics-and-accessories' },
+        { label: 'Gifts', to: '/c/gifts' },
+        { label: 'Home & Living', to: '/c/home-and-living' },
+        { label: 'Jewelry', to: '/c/jewelery' },
+        { label: 'Paper & Party Supplies', to: '/c/paper-and-party-supplies' },
+        { label: 'Pet Supplies', to: '/c/pet-supplies' },
+        { label: 'Shoes', to: '/c/shoes' },
+        { label: 'Toys & Games', to: '/c/toys-and-games' },
+        { label: 'Weddings', to: '/c/weddings' },
     ];
     const searchOptions = [
         {
@@ -127,7 +127,7 @@ export default function Navbar() {
                             {open && (
                                 <div className="menu-dropdown">
                                     {dropdownLinks.map((link, id) => (
-                                        <Link to={link.to} key={link.id} className="dropdown-link">
+                                        <Link to={link.to} key={id} className="dropdown-link">
                                             {link.label}
                                         </Link>
                                     ))}

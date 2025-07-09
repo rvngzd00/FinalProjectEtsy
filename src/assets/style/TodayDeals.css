@@ -111,17 +111,17 @@ h5 {
     height: 18px;
 }
 
-.title-section,
+
 .price-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 7px 0;
+    margin: 5px 0 7px 0;
 }
 
 .card-price {
     color: #0f733a;
-    font: 600 20px Arial;
+    font: 600 17px Arial;
 }
 
 .card-old-price {
