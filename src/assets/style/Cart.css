@@ -1,85 +1,53 @@
-/* Cart ümumi konteyner */
-.cart-page {
-  max-width: 1200px;
-  margin: 40px auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  padding: 0 20px;
-  box-sizing: border-box;
+.cart-page{
+  padding: 77px;
 }
-
-/* Başlıq və izah */
 .cart-header {
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
 
 .cart-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font: 700 27px Arial;
   margin-bottom: 4px;
 }
 
 .cart-subtitle {
-  font-size: 1rem;
+  font: 400 14px Arial;
   color: #666;
 }
 
-/* Sifariş və məhsullar bölməsi - grid ilə yan-yana */
 .cart-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
-/* Solda məhsullar */
-.cart-items {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px 20px;
-}
-
-/* Hər məhsul kartı */
 .cart-item {
   display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
   gap: 15px;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
+  margin: 0 0 7px 0;
 }
 
-.cart-item:last-child {
-  border-bottom: none;
-}
 
-/* Şəkil */
 .cart-item-image {
-  flex-shrink: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 6px;
-  overflow: hidden;
+  width: 200px;
+  height: 157px;
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
 }
 
 .cart-item-image img {
   width: 100%;
   height: 100%;
+  border-radius: 6px;
   object-fit: cover;
   display: block;
 }
 
-/* Məhsul detalları */
-.cart-item-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.cart-item-details{
+  width: 700px;
 }
 
-/* Məhsul adı və mağaza */
-.item-info {
-  margin-bottom: 8px;
-}
 
 .item-title {
   font-size: 1.1rem;
@@ -90,27 +58,21 @@
 
 .item-link {
   text-decoration: none;
-  color: inherit;
+  color: #212121;
 }
 
 .item-link:hover {
-  color: #0071e3;
   text-decoration: underline;
 }
 
 .item-shop {
-  font-size: 0.85rem;
+  font-size: 13px;
   color: #888;
   margin-bottom: 6px;
 }
 
-/* Reytinq */
-.item-rating {
-  font-size: 0.9rem;
-  color: #f5a623; /* qızıl ulduz rəngi */
-}
 
-/* Qiymət */
+
 .item-price {
   font-size: 1.2rem;
   font-weight: 700;
@@ -118,7 +80,6 @@
   margin-bottom: 12px;
 }
 
-/* Miqdar seçimi */
 .item-quantity {
   margin-bottom: 12px;
   display: flex;
@@ -126,11 +87,7 @@
   gap: 10px;
 }
 
-.quantity-label {
-  font-size: 0.9rem;
-  color: #555;
-  min-width: 60px;
-}
+
 
 .quantity-input {
   width: 60px;
@@ -142,10 +99,9 @@
 
 /* Sil düyməsi */
 .remove-item-button {
-  align-self: flex-start;
   background: none;
   border: none;
-  color: #999;
+  color: #5a5a5a;
   font-size: 0.9rem;
   cursor: pointer;
   transition: color 0.2s;
@@ -304,4 +260,3 @@
 .continue-shopping:hover {
   text-decoration: underline;
 }
-

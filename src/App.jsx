@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { GlobalProvider } from './context/GlobalContext.jsx';
 import './assets/style/App.css';
 import Navbar from "./components/Navbar"
 import Home from './pages/Home';
@@ -9,12 +8,18 @@ import Footer from "./components/Footer"
 import Product from './pages/Product';
 import Category from './pages/Category';
 import Cart from './pages/Cart.jsx';
+import Favorites from './pages/Favorites.jsx';
 
 
 
 export default function App() {
+  useEffect(()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  },[window.location.pathname]);
   return (
-    <GlobalProvider>
       <div className="app">
         <Navbar />
         <main className="app-main">
@@ -30,6 +35,7 @@ export default function App() {
             {/* <Route path="/search" element={<Search />} /> */}
             <Route path="/cart" element={<Cart />} />
 
+            <Route path="/favorites" element={<Favorites />} />
 
             {/* User Routes */}
             {/* <Route path="/profile" element={<UserProfile />} />
@@ -51,6 +57,5 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </GlobalProvider>
   );
 }

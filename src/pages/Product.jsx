@@ -2,16 +2,24 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext.jsx';
+import { FavoritesContext } from '../context/FavoritesContext.jsx';
+import { CartContext } from '../context/CartContext.jsx';
 import '../assets/style/Product.css';
 import RateStar from '../components/RateStar';
-
 export default function Product() {
-  const { products } = useContext(GlobalContext);
   const { id } = useParams();
-  const { favorites, addToCart, addToFavorites } = useContext(GlobalContext);
+  const { products } = useContext(GlobalContext);
+  const { addToCart } = useContext(CartContext);
+  const { favorites, addToFavorites,removeFromFavorites } = useContext(FavoritesContext);
+
+
+
   const found = products.find(p => String(p.id) === String(id));
   const [productDet, setProductDet] = useState(found);
+
   const isFavorite = favorites.some(fav => fav.id === productDet.id);
+  const [showFavoritePopup, setShowFavoritePopup] = useState(false);
+  const [popupText, setPopupText] = useState('');
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedStyle, setSelectedStyle] = useState('');
@@ -43,16 +51,38 @@ export default function Product() {
 
                 <div
                   className="product-heart"
-                  onClick={() => addToFavorites(productDet)}
-                  
-                  title={isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-                >
+                  onClick={() => {
+                    if (isFavorite) {
+                      removeFromFavorites(productDet.id);
+                      setPopupText('Removed from favorites');
+                    } else {
+                      addToFavorites(productDet);
+                      setPopupText('This favorite won’t last! ');
+                    }
+
+                    setShowFavoritePopup(true);
+                    setTimeout(() => setShowFavoritePopup(false), 3000);
+                  }}
+
+                  title={isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}>
                   <span className='favorite-button-svg'>
-                    <svg style={{ fill: isFavorite ? 'red' : 'white',stroke: isFavorite ? 'red' : 'black' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg style={{ fill: isFavorite ? 'red' : 'white', stroke: isFavorite ? 'red' : 'black' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="M21.024 12.281a2 2 0 0 1-.147.24l-.673.961q-.349.497-.789.915L12 21.422l-7.415-7.025a6 6 0 0 1-.789-.915l-.673-.961a2 2 0 0 1-.147-.24A6 6 0 0 1 12 4.528a6 6 0 0 1 9.024 7.753"></path>
                     </svg>
                   </span>
                 </div>
+                {showFavoritePopup && (
+                  <div className="favorite-popup">
+                    <div>
+                      <strong>{popupText}</strong>
+                      {popupText === 'This favorite won’t last! ' && (
+                        <>
+                          <Link to="/">Sign In</Link> to save permanently.
+                        </>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 <img src={productDet.productImages[selectedImage]} alt="Product" className="product-main-image" />
                 <button onClick={() => setSelectedImage(prev => (prev > 0 ? prev - 1 : productDet.productImages.length - 1))} className="nav-button left">
@@ -146,7 +176,7 @@ export default function Product() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 
 } 

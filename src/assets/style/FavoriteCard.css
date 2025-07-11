@@ -1,0 +1,66 @@
+.favorite-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 290px;
+    width: 250px;
+
+    text-decoration: none;
+}
+
+.favorite-card img {
+    width: 250px;
+    height: 200px;
+    border-radius: 7px;
+}
+
+.favorite-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 400 14px Arial;
+    color: #212121;
+    margin: 3px 0;
+    width: 250px;
+}
+
+.favorite-price-sectionn {
+    display: inline;
+    margin: 3px 0 0 0;
+}
+
+.favorite-price {
+    font: 777 17px Arial;
+    color: #212121;
+}
+
+.favorite-old-price {
+    color: #505050d7;
+    font: 400 13px Arial;
+    text-decoration: line-through;
+    margin: 0 0 0 7px;
+}
+
+.favorite-product-seller {
+    font: 400 13px Arial;
+    color: #575757bd;
+}
+
+.favorite-page-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 7px 7px;
+    transition: opacity 0.3s ease;
+    z-index: 777;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.favorite-page-button-svg{
+  width: 17px;
+  height: 17px;
+  display: block;
+}

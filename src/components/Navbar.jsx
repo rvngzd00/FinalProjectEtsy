@@ -1,12 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Search, Heart, Gift, ShoppingCart } from 'lucide-react';
+import { GlobalContext } from '../context/GlobalContext';
 import SignInCard from './SignInCard';
 import '../assets/style/Navbar.css';
 
 export default function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
+    const { products } = useContext(GlobalContext);
 
+    const filteredResults = products.filter(product =>
+        product.productTitle.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     const navLinks = [
         { label: 'Gifts', icon: <Gift size={18} className="navbar-menu-icon" />, to: '/gifts' },
@@ -66,10 +71,7 @@ export default function Navbar() {
             alt: "Gourmet food gift basket with artisanal products",
         }
     ];
-    const handleSearch = (e) => {
-        e.preventDefault();
-        console.log('Searching for:', searchQuery);
-    };
+
     //SignIn Card
     const [showSignUp, setShowSignUp] = useState(false);
     const handleOpenSignIn = () => setShowSignUp(true);
@@ -86,21 +88,16 @@ export default function Navbar() {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setOpen(false);
             }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
         };
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
 
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     return (
         <nav>
             <div className='container'>
@@ -153,16 +150,38 @@ export default function Navbar() {
                         </div>
                         {showDropdown && (
                             <div className="search-dropdown">
-                                <div className="search-dropdown-heading">Gifts as special as they are</div>
-                                {searchOptions.map((link, id) => (
-                                    <Link className="search-option" key={link.id}>
-                                        <img src={link.imgSrc} alt={link.alt} className="search-option-icon" />
-                                        <span>{link.label}</span>
-                                    </Link>
-                                ))}
+                                {searchQuery.trim() === "" ? (
+                                    <>
+                                        <div className="search-dropdown-heading">Gifts as special as they are</div>
+                                        {searchOptions.map((link, id) => (
+                                            <Link className="search-option" key={id}>
+                                                <img src={link.imgSrc} alt={link.alt} className="search-option-icon" />
+                                                <span>{link.label}</span>
+                                            </Link>
+                                        ))}
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="search-dropdown-heading">Search Results</div>
+                                        {filteredResults.length > 0 ? (
+                                            filteredResults.slice(0, 7).map((product) => (
+                                                <Link
+                                                    key={product.id}
+                                                    to={`/product/${product.id}`}
+                                                    className="search-option"
+                                                    onClick={() => setShowDropdown(false)}
+                                                >
+                                                    <img src={product.productImages[0]} alt={product.productTitle} className="search-option-icon" />
+                                                    <span>{product.productTitle}</span>
+                                                </Link>
+                                            ))
+                                        ) : (
+                                            <div className="no-result">No results found</div>
+                                        )}
+                                    </>
+                                )}
                             </div>
-                        )
-                        }
+                        )}
                     </div>
                     {/* Right side */}
                     <nav className="navbar-nav">
@@ -173,7 +192,7 @@ export default function Navbar() {
                         <Link to="/cart" className="navbar-nav-icon"><div className='link-tooltip'><ShoppingCart size={23} /><span className='tooltip'>Cart</span></div> </Link>
                     </nav>
                 </div>
-            {/* Navigation links below search bar */}
+                {/* Navigation links below search bar */}
                 <div className="navbar-bottom-nav">
 
                     {navLinks.map((link, idx) => (
