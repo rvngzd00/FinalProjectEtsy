@@ -5,12 +5,14 @@
     margin: 57px 0;
 
 }
-.editors-pick-text{
+
+.editors-pick-text {
     font: 500 15px Roboto;
     color: #464646b7;
 
 }
-.editor-gifts-text{
+
+.editor-gifts-text {
     width: 661px;
     display: flex;
     flex-direction: column;
@@ -18,16 +20,19 @@
     margin: 0 0 87px 0;
 
 }
+
 .editor-gifts-text h5 {
     font: 500 27px Segoe UI;
     margin: 0 0 7px 0;
 }
-.shop-text{
+
+.shop-text {
     font: 400 17px/1.3 Roboto;
     color: #303030ec;
     width: 340px;
     margin: 0 0 17px 0;
 }
+
 .editor-gifts-text a {
     width: 230px;
     padding: 12px 15px;
@@ -52,7 +57,7 @@
 }
 
 .editor-card {
-    position:relative;
+    position: relative;
     width: 317px;
     height: 317px;
     display: flex;
@@ -61,49 +66,108 @@
     border-radius: 17px;
     text-decoration: none;
 }
+
 .editor-card-price {
-  padding: 3px 10px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #00000075;
-  color: #000;
-  background-color: #fff;
-  border-radius: 30px;
-  font: 500 13px Segoe UI;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 777;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #00000075;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+    font: 500 13px Segoe UI;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 777;
 }
 
 .favorite-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  padding: 6px 6px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 777;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 777;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .editor-card:hover .favorite-button,
-.editor-card:hover .editor-card-price{
-  opacity: 1;
+.editor-card:hover .editor-card-price {
+    opacity: 1;
 }
 
 
 .favorite-button-svg svg {
-  fill: #fff;
-  stroke: #000;
-  stroke-width: 2px;
-  width: 17px;
-  height: 17px;
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2px;
+    width: 17px;
+    height: 17px;
+}
+
+@media (max-width: 1367px) {
+    .editor-gifts-text{
+        width: 400px;
+    }
+    .editor-card:nth-last-child(1){
+        display: none;
+    }
+}
+@media (max-width: 1087px) {
+    .editor-card{
+        width: 217px;
+        height: 217px;
+    }
+    .editor-gifts-text{
+        margin: 0 0 0 0;
+    }
+}
+@media (max-width: 900px) {
+
+    .editor-card:nth-last-child(2){
+        display: none;
+    }
+}
+
+@media (max-width: 687px) {
+    .editor-gifts-section{
+        justify-content: center;
+    }
+    .editor-cards{
+        align-items: center;
+    }
+    .editor-card:nth-last-child(3),.editor-card:nth-last-child(4),.editor-card:nth-last-child(5){
+        display: none;
+    }
+    .editor-gifts-text{
+        padding: 17px;
+        width: 350px;
+    }
+    .editor-gifts-text h5{
+        font-size: 22px;
+    }
+    .shop-text{
+        font-size: 17px;
+    }
+}
+@media (max-width: 600px) {
+    .editor-gifts-section{
+        justify-content: center;
+        width: 100%;
+    }
+    .editor-gifts-text{
+        width: 100%;
+    }
+      .editor-card{
+        display: none;
+    }
 }

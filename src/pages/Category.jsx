@@ -14,7 +14,7 @@ function Category() {
     : products.filter(p => p.category.toLowerCase() === category.toLowerCase());
   return (
     <div className='container'>
-      <div className="card-container">
+      <div className="card-container-category">
         {
           filtered.map((card) => (
             <ProductCard key={card.id} cardDetail={card} />

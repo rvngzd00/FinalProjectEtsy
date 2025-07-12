@@ -10,7 +10,7 @@ export default function Product() {
   const { id } = useParams();
   const { products } = useContext(GlobalContext);
   const { addToCart } = useContext(CartContext);
-  const { favorites, addToFavorites,removeFromFavorites } = useContext(FavoritesContext);
+  const { favorites, addToFavorites, removeFromFavorites } = useContext(FavoritesContext);
 
 
 
@@ -25,7 +25,7 @@ export default function Product() {
   const [selectedStyle, setSelectedStyle] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
   const [quantity, setQuantity] = useState(1);
-  if (!productDet) return <p>Yüklənir...</p>; // 🚨 Əsas hissə buradır
+  if (!productDet) return <p>Loading...</p>;
 
 
   return (
@@ -77,7 +77,7 @@ export default function Product() {
                       <strong>{popupText}</strong>
                       {popupText === 'This favorite won’t last! ' && (
                         <>
-                          <Link to="/">Sign In</Link> to save permanently.
+                          Sign In to save permanently.
                         </>
                       )}
                     </div>
@@ -144,7 +144,7 @@ export default function Product() {
             </div>
 
             <div className="form-group">
-              <label>Color selection</label>
+              <label>Additional selection</label>
               <select value={selectedColor} onChange={(e) => setSelectedColor(e.target.value)}>
                 <option value="">Select an option</option>
                 {productDet.colors.map(color => (

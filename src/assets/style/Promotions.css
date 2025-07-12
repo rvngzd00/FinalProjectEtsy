@@ -4,9 +4,8 @@
 }
 
 .promotion-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .promotion-card {
@@ -39,4 +38,24 @@
 .promotion-category {
     font: 500 17px Arial;
     color: #000;
+}
+
+
+@media (max-width: 600px) {
+    .promotion-section-heading{
+        font-size: 18px;
+    }
+    .promotion-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promotion-card {
+        width: 50%;
+        min-width: 80px;
+        max-width: 100%;
+        height: auto;
+    }
 }

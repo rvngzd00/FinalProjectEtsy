@@ -40,3 +40,31 @@
     font: 500 13px Segoe UI;
     color: #000;
 }
+
+@media (max-width: 900px) {
+    .gift-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .gift-card {
+        width: 100%;
+        min-width: 120px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .gift-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gift-card {
+        width: 100%;
+        min-width: 80px;
+        max-width: 100%;
+        height: auto;
+    }
+}

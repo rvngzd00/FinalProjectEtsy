@@ -1,6 +1,7 @@
-.cart-page{
+.cart-page {
   padding: 77px;
 }
+
 .cart-header {
   margin: 20px 0 20px 0;
 }
@@ -44,7 +45,7 @@
   display: block;
 }
 
-.cart-item-details{
+.cart-item-details {
   width: 700px;
 }
 
@@ -97,7 +98,6 @@
   border-radius: 4px;
 }
 
-/* Sil düyməsi */
 .remove-item-button {
   background: none;
   border: none;
@@ -113,7 +113,6 @@
   text-decoration: underline;
 }
 
-/* Sağ tərəfdə sifariş xülasəsi */
 .order-summary {
   background: #fff;
   border: 1px solid #ddd;
@@ -123,14 +122,12 @@
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
 }
 
-/* Sifariş xülasəsi başlığı */
 .summary-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-/* Qiymət xətləri */
 .summary-row,
 .summary-total {
   display: flex;
@@ -147,7 +144,6 @@
   padding-top: 12px;
 }
 
-/* Göndərmə variantları */
 .shipping-options {
   margin: 20px 0;
 }
@@ -190,45 +186,6 @@
   color: #888;
 }
 
-/* Kupon kodu */
-.promo-code {
-  margin-bottom: 20px;
-}
-
-.promo-title {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.promo-input-container {
-  display: flex;
-  gap: 8px;
-}
-
-.promo-input {
-  flex-grow: 1;
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.promo-button {
-  background-color: #222;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.promo-button:hover {
-  background-color: #444;
-}
-
-/* Checkout düyməsi */
 .checkout-button {
   width: 100%;
   padding: 14px 0;
@@ -247,7 +204,6 @@
   background-color: #444;
 }
 
-/* Davam et alış-verişə linki */
 .continue-shopping {
   text-align: center;
   display: block;
@@ -259,4 +215,86 @@
 
 .continue-shopping:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1237px) {
+  .cart-item{
+    width: 700px;
+  }
+}
+@media (max-width: 970px) {
+  .cart-item{
+    width: 500px;
+  }
+
+}
+@media (max-width: 900px) {
+  .cart-page {
+    padding: 24px;
+  }
+  .cart-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cart-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    height: auto;
+    min-width: 120px;
+    max-width: 100%;
+  }
+
+  .cart-item-details {
+    width: 100%;
+  }
+
+  .order-summary {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-page {
+    padding: 8px;
+  }
+
+  .cart-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    height: auto;
+    min-width: 80px;
+    max-width: 100%;
+  }
+
+  .cart-item-details {
+    width: 100%;
+  }
+
+  .order-summary {
+    width: 100%;
+    margin-top: 12px;
+  }
 }

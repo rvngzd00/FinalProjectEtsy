@@ -1,7 +1,6 @@
 .what-is-etsy-content {
   text-align: center;
   padding: 70px 0;
-  background-color: #fffbd9;
 }
 
 .what-is-etsy-title {
@@ -45,6 +44,7 @@
   border-bottom: 1px dashed #222;
   cursor: help;
 }
+
 .what-is-etsy-help-section {
   margin-top: 56px;
   text-align: center;
@@ -78,14 +78,36 @@
 
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .what-is-etsy-content {
+    padding: 40px 0;
+  }
+
   .what-is-etsy-columns {
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
   }
 
   .what-is-etsy-column {
-    min-width: auto;
-    max-width: none;
+    width: 100%;
+    min-width: 120px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .what-is-etsy-content {
+    padding: 20px 0;
+  }
+
+  .what-is-etsy-columns {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .what-is-etsy-column {
+    width: 100%;
+    min-width: 80px;
+    max-width: 100%;
   }
 }

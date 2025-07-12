@@ -6,9 +6,9 @@ import { CartContext } from '../context/CartContext.jsx';
 
 
 const shippingOptions = [
-  { id: 'standard', name: 'Standard Shipping', cost: 5.00, estimatedDays: '5-7 days' },
-  { id: 'express', name: 'Express Shipping', cost: 15.00, estimatedDays: '2-3 days' },
-  { id: 'overnight', name: 'Overnight Shipping', cost: 25.00, estimatedDays: '1 day' }
+  { id: 'standard', name: 'Standard Shipping', cost: 7.00, estimatedDays: '5-7 days' },
+  { id: 'express', name: 'Express Shipping', cost: 17.00, estimatedDays: '2-3 days' },
+  { id: 'overnight', name: 'Overnight Shipping', cost: 27.00, estimatedDays: '1 day' }
 ];
 
 export default function Cart() {
